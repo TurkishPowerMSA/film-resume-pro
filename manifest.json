@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Film Resume Pro - Kaldığın Yerden Devam Et",
+  "version": "1.0",
+  "description": "Dizi ve filmleri tarayıcıyı kapatsanız bile, tekrar açtığınızda otomatik olarak tam kaldığınız saniyeden başlatır.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ]
+}
